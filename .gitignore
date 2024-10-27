@@ -1,0 +1,8 @@
+.env
+terraform.tfstate*
+.terraform*
+.tfvars
+id_rsa.pub
+.DS_Store
+eirimhan*
+*.pdf
