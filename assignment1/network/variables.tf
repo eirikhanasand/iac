@@ -14,42 +14,42 @@ variable "location" {
 }
 
 variable "vn-name" {
-    description = "Virtual Network Name"
-    type        = string
+  description = "Virtual Network Name"
+  type        = string
 }
 
 variable "vn-address_space" {
-    description = "Virtual Network Address Space"
-    type        = string
+  description = "Virtual Network Address Space"
+  type        = string
 }
 
 variable "sn-name" {
-    description = "Subnet Name"
-    type        = string
+  description = "Subnet Name"
+  type        = string
 }
 
 variable "sn-address_prefixes" {
-    description = "Subnet Address Prefixes"
-    type        = string
+  description = "Subnet Address Prefixes"
+  type        = string
 }
 
 variable "nsg-name" {
-    description = "Subnet Group Name"
-    type        = string
+  description = "Subnet Group Name"
+  type        = string
 }
 
 variable "rule-ssh" {
-    description = "Allow SSH Network Security Group Rule"
-    type = list(object({
-        name                       = string
-        priority                   = number
-        direction                  = string
-        access                     = string
-        protocol                   = string
-        source_port_range          = string
-        destination_port_range     = string
-        source_address_prefix      = string
-        destination_address_prefix = string
-    }))
-   
+  description = "Allow SSH Network Security Group Rule"
+  type = list(object({
+    name                       = string
+    priority                   = number
+    direction                  = string
+    access                     = string
+    protocol                   = string
+    source_port_range          = string
+    destination_port_range     = string
+    source_address_prefix      = string
+    destination_address_prefix = string
+  }))
+
 }
