@@ -4,17 +4,10 @@ name: Terraform CI/CD Pipeline
 on:
   push:
     branches:
-      # For new feature branches
-      - "feature/*"
-      # For bug fix branches
-      - "fix/*"
-      # For security patches
-      - "security/*"
+      - "**"
   pull_request:
     branches:
-      - dev
-      - staging
-      - prod
+      - "**"
 
 # Defines the jobs to perform
 jobs:
