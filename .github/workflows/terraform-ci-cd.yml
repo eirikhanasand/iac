@@ -11,7 +11,7 @@ on:
       # For security patches
       - "security/*"
       # For main branch
-      - "main/*"
+      - "main"
   pull_request:
     branches:
       - dev
