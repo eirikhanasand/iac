@@ -3,50 +3,6 @@
 # ----- Root Variable Definitions -----
 
 
-# Key Vault Variables
-
-
-variable "kv-name" {
-    description = "Key Vault Name"
-    type        = string
-}
-
-variable "kv-sku" {
-    description = "Key Vault SKU"
-    type = string
-}
-
-variable kv-secret_permissions {
-    description = "Key Vault Secret Permissions"
-    type        = list(string)
-}
-
-variable kv-sak {
-    description = "Virtual Machine Storage Account Key"
-    type        = string
-}
-
-variable kv-vm_username_name {
-    description = "Key Vault Virtual Machine Name"
-    type        = string
-}
-
-variable kv-vm_password_name {
-    description = "Key Vault Virtual Machine Password"
-    type        = string
-}
-
-variable "vm-admin_username" {
-    description = "Virtual Machine Admin User Name"
-    type        = string
-}
-
-variable "vm-admin_password" {
-    description = "Virtual Machine Admin User Password"
-    type        = string
-}
-
-
 # Network variables
 
 
@@ -102,7 +58,7 @@ variable "rule-ssh" {
 }
 
 
-# Storage Account types
+# Storage Account variables
 
 
 variable "sa-name" {
@@ -141,75 +97,98 @@ variable sc-container_access_type {
 }
 
 
-# VM sizes
+# App service variables
 
 
-variable "ni-name" {
-    description = "Network Interface Name"
+variable "sp-name" {
+    description = "Service Plan Name"
     type        = string
 }
 
-variable "ni-ipconfig_name" {
-    description = "Network Interface IP Configuration Name"
-    type        = string
-} 
-
-variable "ni-ipconfig_private_address_allocation" {
-    description = "Network Interface IP Configuration Private Address Allocation"
+variable "sp-os" {
+    description = "Service Plan OS"
     type        = string
 }
 
-variable "vm-name" {
-    description = "Virtual Machine Name"
+variable "sp-sku" {
+    description = "Service Plan Sku"
     type        = string
 }
 
-variable "vm-size" {
-    description = "Virtual Machine Size"
+
+# Database variables
+
+
+variable "sql-server_name" {
+    description = "SQL Server Name"
     type        = string
 }
 
-variable "vm-os_disk_caching" {
-    description = "Virtual Machine OS Disk Caching Permissions"
+variable "sql-version" {
+    description = "SQL Version"
     type        = string
 }
 
-variable "vm-os_disk_sat" {
-    description = "Virtual Machine OS Disk Storage Account Type"
+variable "sql-administrator_login" {
+    description = "Administrator Login Username"
     type        = string
 }
 
-variable "vm-source_image_reference_publisher" {
-    description = "Virtual Machine Source Image Reference Publisher"
+variable "sql-administrator_password" {
+    description = "Administrator Login Password"
     type        = string
 }
 
-variable "vm-source_image_reference_offer" {
-    description = "Virtual Machine Server Type"
+variable "sql-name" {
+    description = "SQL Database Name"
     type        = string
 }
 
-variable "vm-source_image_reference_sku" {
-    description = "Virtual Machine OS Release"
+variable "sql-license_type" {
+    description = "SQL License Type"
     type        = string
 }
 
-variable "vm-source_image_reference_version" {
-    description = "Virtual Machine Release Version"
+variable "sql-sku_name" {
+    description = "SKU Name"
     type        = string
 }
 
-variable "vm-tags" {
-    description = "Virtual Machine Tags"
+variable "sql-enclave_type" {
+    description = "VBS"
     type        = string
 }
 
-variable "vm-identity" {
-    description = "Virtual Machine Identity"
+variable "sql-max_size_gb" {
+    description = "SQL Max Size in GB"
     type        = string
 }
 
-variable "vm-ssh_public_key_path" {
-  description = "Path to the SSH public key used for VM access"
-  type        = string
+variable "sql-collation" {
+    description = "SQL Collation Type"
+    type        = string
+}
+
+
+# Load balancer variables
+
+
+variable "lb-name" {
+    description = "Load Balancer Name"
+    type        = string
+}
+
+variable "lb-public_ip" {
+    description = "Load Balancer Public IP"
+    type        = string
+}
+
+variable "lb-frontend_ip" {
+    description = "Load Balancer Frontend Public IP"
+    type        = string
+}
+
+variable "allocation_method" {
+    description = "Load Balancer IP Allocation Method"
+    type        = string
 }
