@@ -11,7 +11,7 @@ on:
       # For security patches
       - "security/*"
       # For main branch
-      - "main"
+      - "main/*"
   pull_request:
     branches:
       - dev
@@ -52,12 +52,10 @@ jobs:
       - name: Run TFLint
         run: tflint
 
-      - name: Install tfsec
-        run: |
-          curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install.sh | bash
-
       - name: Run tfsec Security Scan
-        run: tfsec --soft-fail
+        uses: aquasecurity/tfsec-action@v1.0.3
+        with:
+          args: --soft-fail
         continue-on-error: true
   
   # Actions to perform for non-prod env (init, plan, merge)
