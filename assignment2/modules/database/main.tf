@@ -3,10 +3,6 @@
 # SQL database.
 
 
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_mssql_server" "eirik-sql-server" {
   name                         = var.sql-server-name
   resource_group_name          = var.rg-name

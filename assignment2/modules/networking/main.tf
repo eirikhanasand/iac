@@ -7,29 +7,24 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "eirik-rg" {
-  name     = var.rg-name
-  location = var.location
-}
-
 resource "azurerm_virtual_network" "eirik-vnet" {
   name                = var.vn-name
   address_space       = [var.vn-address-space]
-  location            = azurerm_resource_group.eirik-rg.location
-  resource_group_name = azurerm_resource_group.eirik-rg.name
+  resource_group_name = var.rg-name
+  location            = var.location
 }
 
 resource "azurerm_subnet" "eirik-sn" {
   name                 = var.sn-name
-  resource_group_name  = azurerm_resource_group.eirik-rg.name
+  resource_group_name  = var.rg-name
   virtual_network_name = azurerm_virtual_network.eirik-vnet.name
   address_prefixes     = [var.sn-address-prefixes]
 }
 
 resource "azurerm_network_security_group" "eirik-nsg" {
   name                = var.nsg-name
-  location            = azurerm_resource_group.eirik-rg.location
-  resource_group_name = azurerm_resource_group.eirik-rg.name
+  location            = var.location
+  resource_group_name = var.rg-name
 
   dynamic "security_rule" {
     for_each = var.rule-ssh

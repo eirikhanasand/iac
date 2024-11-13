@@ -124,7 +124,7 @@ jobs:
         id: apply
         run: terraform apply -var-file="terraform.tfvars.prod"
 
-      # Sets it to pending manual approvl
+      # Sets it to pending manual approval
       - name: Request Manual Approval
         if: github.event.pull_request.base.ref == 'prod'
         uses: hmarr/auto-approve-action@v2

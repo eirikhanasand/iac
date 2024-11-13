@@ -3,11 +3,6 @@
 # Load balancer.
 
 
-resource "azurerm_resource_group" "eirik-rg" {
-  name     = var.rg-name
-  location = var.location
-}
-
 resource "azurerm_public_ip" "eirik-public-ip" {
   name                = var.lb-public-ip
   location            = var.location
