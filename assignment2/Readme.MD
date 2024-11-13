@@ -25,3 +25,4 @@ The purpose of the database module is to store end user data from the applicatio
 3. Run `terraform plan -var-file="../deployments/terraform.tfvars.*"` to plan the build with the predefined variables. NB: Replace * with dev / staging / prod.
 4. Run `terraform apply` to actually create the resources.
 5. Run `terraform destroy` when you are done.
+6. EXTRA `az ad sp create-for-rbac --name "terraform-sp" --role Contributor --scopes /subscriptions/YOUR_SUBSCRIPTION_ID` to generate the secrets. Load these into your env.

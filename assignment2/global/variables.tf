@@ -21,8 +21,23 @@ variable "vn-name" {
   type        = string
 }
 
-variable "vn-address_space" {
+variable "vn-address-space" {
   description = "Virtual Network Address Space"
+  type        = string
+}
+
+variable "ni-name" {
+  description = "Network Interface Name"
+  type        = string
+}
+
+variable "ni-ipconfig_private_address_allocation" {
+  description = "Network Interface IP Config Private Address Allocation"
+  type        = string
+}
+
+variable "ni-ipconfig_name" {
+  description = "Network Interface IP Config Name"
   type        = string
 }
 
@@ -31,7 +46,7 @@ variable "sn-name" {
   type        = string
 }
 
-variable "sn-address_prefixes" {
+variable "sn-address-prefixes" {
   description = "Subnet Address Prefixes"
   type        = string
 }
@@ -54,7 +69,6 @@ variable "rule-ssh" {
     source_address_prefix      = string
     destination_address_prefix = string
   }))
-
 }
 
 
@@ -119,7 +133,7 @@ variable "sp-sku" {
 # Database variables
 
 
-variable "sql-server_name" {
+variable "sql-server-name" {
   description = "SQL Server Name"
   type        = string
 }
@@ -129,12 +143,12 @@ variable "sql-version" {
   type        = string
 }
 
-variable "sql-administrator_login" {
+variable "sql-administrator-login" {
   description = "Administrator Login Username"
   type        = string
 }
 
-variable "sql-administrator_password" {
+variable "sql-administrator-password" {
   description = "Administrator Login Password"
   type        = string
 }
@@ -144,22 +158,22 @@ variable "sql-name" {
   type        = string
 }
 
-variable "sql-license_type" {
+variable "sql-license-type" {
   description = "SQL License Type"
   type        = string
 }
 
-variable "sql-sku_name" {
+variable "sql-sku-name" {
   description = "SKU Name"
   type        = string
 }
 
-variable "sql-enclave_type" {
+variable "sql-enclave-type" {
   description = "VBS"
   type        = string
 }
 
-variable "sql-max_size_gb" {
+variable "sql-max-size-gb" {
   description = "SQL Max Size in GB"
   type        = string
 }
@@ -178,17 +192,17 @@ variable "lb-name" {
   type        = string
 }
 
-variable "lb-public_ip" {
+variable "lb-public-ip" {
   description = "Load Balancer Public IP"
   type        = string
 }
 
-variable "lb-frontend_ip" {
+variable "lb-frontend-ip" {
   description = "Load Balancer Frontend Public IP"
   type        = string
 }
 
-variable "allocation_method" {
+variable "allocation-method" {
   description = "Load Balancer IP Allocation Method"
   type        = string
 }

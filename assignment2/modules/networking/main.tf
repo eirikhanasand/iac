@@ -14,7 +14,7 @@ resource "azurerm_resource_group" "eirik-rg" {
 
 resource "azurerm_virtual_network" "eirik-vnet" {
   name                = var.vn-name
-  address_space       = [var.vn-address_space]
+  address_space       = [var.vn-address-space]
   location            = azurerm_resource_group.eirik-rg.location
   resource_group_name = azurerm_resource_group.eirik-rg.name
 }
@@ -23,7 +23,7 @@ resource "azurerm_subnet" "eirik-sn" {
   name                 = var.sn-name
   resource_group_name  = azurerm_resource_group.eirik-rg.name
   virtual_network_name = azurerm_virtual_network.eirik-vnet.name
-  address_prefixes     = [var.sn-address_prefixes]
+  address_prefixes     = [var.sn-address-prefixes]
 }
 
 resource "azurerm_network_security_group" "eirik-nsg" {

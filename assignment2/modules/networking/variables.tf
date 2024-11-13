@@ -18,7 +18,7 @@ variable "vn-name" {
   type        = string
 }
 
-variable "vn-address_space" {
+variable "vn-address-space" {
   description = "Virtual Network Address Space"
   type        = string
 }
@@ -28,7 +28,7 @@ variable "sn-name" {
   type        = string
 }
 
-variable "sn-address_prefixes" {
+variable "sn-address-prefixes" {
   description = "Subnet Address Prefixes"
   type        = string
 }
@@ -51,5 +51,4 @@ variable "rule-ssh" {
     source_address_prefix      = string
     destination_address_prefix = string
   }))
-
 }

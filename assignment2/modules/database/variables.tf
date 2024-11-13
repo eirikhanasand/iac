@@ -13,7 +13,7 @@ variable "location" {
   type        = string
 }
 
-variable "sql-server_name" {
+variable "sql-server-name" {
   description = "SQL Server Name"
   type        = string
 }
@@ -23,12 +23,12 @@ variable "sql-version" {
   type        = string
 }
 
-variable "sql-administrator_login" {
+variable "sql-administrator-login" {
   description = "Administrator Login Username"
   type        = string
 }
 
-variable "sql-administrator_password" {
+variable "sql-administrator-password" {
   description = "Administrator Login Password"
   type        = string
 }
@@ -38,22 +38,22 @@ variable "sql-name" {
   type        = string
 }
 
-variable "sql-license_type" {
+variable "sql-license-type" {
   description = "SQL License Type"
   type        = string
 }
 
-variable "sql-sku_name" {
+variable "sql-sku-name" {
   description = "SKU Name"
   type        = string
 }
 
-variable "sql-enclave_type" {
+variable "sql-enclave-type" {
   description = "VBS"
   type        = string
 }
 
-variable "sql-max_size_gb" {
+variable "sql-max-size-gb" {
   description = "SQL Max Size in GB"
   type        = string
 }

@@ -35,8 +35,8 @@ module "networking" {
   location            = var.location
   vn-name             = var.vn-name
   sn-name             = var.sn-name
-  sn-address_prefixes = var.sn-address_prefixes
-  vn-address_space    = var.vn-address_space
+  sn-address-prefixes = var.sn-address-prefixes
+  vn-address-space    = var.vn-address-space
   nsg-name            = var.nsg-name
   rule-ssh            = var.rule-ssh
 }
@@ -68,15 +68,15 @@ module "database" {
   source                     = "../modules/database"
   rg-name                    = var.rg-name
   location                   = var.location
-  sql-server_name            = var.sql-server_name
+  sql-server-name            = var.sql-server-name
   sql-version                = var.sql-version
-  sql-administrator_login    = var.sql-administrator_login
-  sql-administrator_password = var.sql-administrator_password
+  sql-administrator-login    = var.sql-administrator-login
+  sql-administrator-password = var.sql-administrator-password
   sql-name                   = var.sql-name
-  sql-license_type           = var.sql-license_type
-  sql-sku_name               = var.sql-sku_name
-  sql-enclave_type           = var.sql-enclave_type
-  sql-max_size_gb            = var.sql-max_size_gb
+  sql-license-type           = var.sql-license-type
+  sql-sku-name               = var.sql-sku-name
+  sql-enclave-type           = var.sql-enclave-type
+  sql-max-size-gb            = var.sql-max-size-gb
   sql-collation              = var.sql-collation
 }
 
@@ -85,9 +85,9 @@ module "loadbalancer" {
   rg-name           = var.rg-name
   location          = var.location
   lb-name           = var.lb-name
-  lb-public_ip      = var.lb-public_ip
-  lb-frontend_ip    = var.lb-frontend_ip
-  allocation_method = var.allocation_method
+  lb-public-ip      = var.lb-public-ip
+  lb-frontend-ip    = var.lb-frontend-ip
+  allocation-method = var.allocation-method
 }
 
 

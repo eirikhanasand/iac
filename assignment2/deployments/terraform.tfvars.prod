@@ -9,11 +9,11 @@ location                                = "Norway East"
 
 # Virtual Network Configuration
 vn-name                                 = "eirik-vnet"
-vn-address_space                        = "10.0.0.0/16"
+vn-address-space                        = "10.0.0.0/16"
 
 # Subnet Configuration
 sn-name                                 = "eirik-sn"
-sn-address_prefixes                     = "10.0.1.0/24"
+sn-address-prefixes                     = "10.0.1.0/24"
 
 # Network Security Group Configuration
 nsg-name                                = "eirik-nsg"
@@ -36,21 +36,6 @@ ni-name                                 = "eirik-ni"
 ni-ipconfig_name                        = "eirik-ipconfig"
 ni-ipconfig_private_address_allocation  = "Dynamic"
 
-# Virtual Machine Configuration
-vm-name                                 = "eirik-vm"
-vm-size                                 = "Standard_DS1_v2"
-vm-admin_username                       = "eirikadm"
-vm-admin_password                       = "xL/UA3lw87xz)Xi#d7ta!-(nJ:s&i#d7ta!-(nJ:s&PFjX{4Tg'C,WJQ5e9EYKb9"
-vm-os_disk_caching                      = "ReadWrite"
-vm-os_disk_sat                          = "Standard_LRS"
-vm-source_image_reference_publisher     = "Canonical"
-vm-source_image_reference_offer         = "UbuntuServer"
-vm-source_image_reference_sku           = "18.04-LTS"
-vm-source_image_reference_version       = "latest"
-vm-tags                                 = "production"
-vm-identity                             = "SystemAssigned"
-vm-ssh_public_key_path                  = "./id_rsa.pub"
-
 # Storage Account Configuration
 sa-name                                 = "eiriksa"
 sa-account_tier                         = "Standard"
@@ -68,19 +53,19 @@ sp-os                                   = "Linux"
 sp-sku                                  = "P1v2"
 
 # SQL Database Configuration
-sql-server_name                         = "eirik-sql_server"
+sql-server-name                         = "eirik-sql-server"
 sql-version                             = "12.0"
-sql-administrator_login                 = "4dm1n157r470r"
-sql-administrator_password              = "4-v3ry-53cr37-p455w0rd"
+sql-administrator-login                 = "4dm1n157r470r"
+sql-administrator-password              = "4-v3ry-53cr37-p455w0rd"
 sql-name                                = "eirik-db"
-sql-license_type                        = "LicenseIncluded"
-sql-sku_name                            = "S0"
-sql-enclave_type                        = "VBS"
-sql-max_size_gb                         = 2
+sql-license-type                        = "LicenseIncluded"
+sql-sku-name                            = "S0"
+sql-enclave-type                        = "VBS"
+sql-max-size-gb                         = 2
 sql-collation                           = "SQL_Latin1_General_CP1_CI_AS"
 
 # Load Balancer Configuration
 lb-name                                 = "eirik-lb"
-lb-public_ip                            = "PublicIPForLB"
-lb-frontend_ip                          = "PublicIPAddress"
-allocation_method                       = "Static"
+lb-public-ip                            = "PublicIPForLB"
+lb-frontend-ip                          = "PublicIPAddress"
+allocation-method                       = "Static"

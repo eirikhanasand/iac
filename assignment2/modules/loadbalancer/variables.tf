@@ -18,17 +18,17 @@ variable "lb-name" {
   type        = string
 }
 
-variable "lb-public_ip" {
+variable "lb-public-ip" {
   description = "Load Balancer Public IP"
   type        = string
 }
 
-variable "lb-frontend_ip" {
+variable "lb-frontend-ip" {
   description = "Load Balancer Frontend Public IP"
   type        = string
 }
 
-variable "allocation_method" {
+variable "allocation-method" {
   description = "Load Balancer IP Allocation Method"
   type        = string
 }
